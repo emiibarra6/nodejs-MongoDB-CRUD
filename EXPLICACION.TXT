@@ -1,0 +1,36 @@
+npm init -y  crea el package .json 
+
+express: Framework para crear una app de servidor
+
+express-handlebars: Para las views {{{}}}
+
+mongoose: Para permitir la conexion a mongodb. Y modelación
+
+morgan: Nos permite ver por consola las peticiones que van llegando
+
+npm i express express-handlebars mongoose morgan
+
+------------------------CONFIGURACION DE BABEL--------------------
+***babel es para poder utilizar js con sus ultimas actualizaciones
+*** por ej podemos reemplazar los include() por: imports. 
+npm i -D @babel/core @babel/cli @babel/node @babel/preset-env
+*** Una vez instalado configuracion el .json 
+"scripts": {
+    "dev": "nodemon src/index.js --exec babel-node"
+  },
+**Necesitamos crear en la raiz del proyecto .babelrc:
+{
+    "presets" : [
+        "@babel/preset-env"
+    ]
+}
+**Obviamente tenemos que tener nodemon para no tener que reiniciar servidor
+** con esto podemos corrrer con:
+npm run dev
+----------------------- FIN CONFIGURACION DE BABEL------------------
+
+
+NCP es para copiar carpetas/archivos y pegarlas en otro directorio
+por comandos...
+
+
